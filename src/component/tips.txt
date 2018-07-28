@@ -1,0 +1,16 @@
+
+
+
+Component
+
+각각의 component들을 반복하여 render해주는 경우 virtual DOM을 구성하는대 필요한 특정 id가 필요해진다 이 경우 component에 key라는 property를 설정해주어야 한다.
+
+
+
+
+life cycle
+
+1. ajax나 fetch같은 call은 componentDidMount에 넣는경우가 좋다. component가 뼈대가 한번 그려진 시점에 호출
+
+2. event에 대한 해제는 componentWillUnmount에 넣는경우가 좋다.
+ 구형 브라우저의 경우 이벤트 헨들러가 메모리에 누적이 되기 때문

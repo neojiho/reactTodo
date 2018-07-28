@@ -27,6 +27,20 @@
   to { transform: rotate(360deg); }
 }
 
-.todoList-group li {
-	margin: 5px 0;
+.form-control {
+	width:90%;
+	padding:5px;
+}
+.input-group-button button {
+	padding:5px;
+}
+
+.todoList-group > li {
+	margin: 5px 0; padding:5px; border-bottom:1px solid #eee;
+}
+.todoList-group > li > span:nth-child(1) {
+	float:left;
+}
+.todoList-group > li > span:nth-child(2) {
+	float:right;
 }
