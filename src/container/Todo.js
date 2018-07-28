@@ -16,6 +16,7 @@ constructor(){
 		};
 
 		this.handleAddedData = this.handleAddedData.bind(this);
+		this.handleRemovedData = this.handleRemovedData.bind(this);
 		//이벤트가 this를 통하여 하위 component가 바라볼 수 있도록 this를 바인드시켜줌
 	}
 
@@ -53,11 +54,19 @@ constructor(){
 	}
 
 	handleAddedData(text){
-		console.log("인풋박스로부터 전달된값", text);
+		console.log("할일", text);
 		this.setState(({todos}) =>{ //prevState에 todos라는 property가 있기때문에 디스트럭처링으로 표기
 			// const todos = prevState.todos;
 			todos.push(text);
 			return {todos} //todos : todos와 같이 키밸류가 동일한경우 이렇게쓴다.
+		})
+	}
+
+	handleRemovedData(text){
+		this.setState( ({todos}) => {
+			const index = todos.indexOf(text);
+			todos.splice(index, 1);
+			return {todos}
 		})
 	}
 
@@ -69,7 +78,7 @@ constructor(){
 				<hr />
 				<ul className='todoList-group'>
 					{this.state.todos.map((todo, idx) => {
-						return <TodoLi todo={todo} key={idx} />;
+						return <TodoLi todo={todo} key={idx} handleRemovedData={this.handleRemovedData}/>;
 					{ /* build가 되면 new TodoLi({todos:todos})와같이 props들을 객체의 프로퍼티로 던져주게된다. 함수형 컴포넌트에서 render메소드 없이
 					 jsx에서 인자로 {props1, props2} 와같이 쓸수있는 이유임.*/
 					 /* 만약 각각의 component가 아닌 template만 반복해야하는경우 virtual dom은 각각의 unique한 id가 있어야해서 아래와같이
