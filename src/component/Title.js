@@ -1,16 +1,25 @@
 import React, {Component} from 'react';
 
 
-class Title extends Component {
+// class Title extends Component {
+//
+// 	render() {
+// 		return (
+// 			<div className='page-header'>
+// 				<h1>{this.props.text}</h1>
+// 			</div>
+// 		)
+//
+// 	}
+// }
 
-	render() {
-		return (
-			<div className='page-header'>
-				<h1>{this.props.text}</h1>
-			</div>
-		)
-
-	}
-}
+const Title = ({text}) => {
+	//인자로 props 객체를 넘어오므로 props.text값을 디스트럭쳐링으로 받아옴.
+	return (
+		<div className='page-header'>
+			<h1>{text}</h1>
+		</div>
+	)
+};
 
 export default Title;

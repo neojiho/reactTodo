@@ -23,6 +23,13 @@ life cycle
  구형 브라우저의 경우 이벤트 헨들러가 메모리에 누적이 되기 때문
 
 
- eventHandling
+eventHandling
 
- - virtual DOM을 real DOM처럼 핸들링하는건 리엑트의 방법이 아님. 필요하다면 ref라는 참조값을 설정해서 사용하라 최대한 DOM참조 없이 작업을 하는것이 퍼포먼스에 좋다.
+- virtual DOM을 real DOM처럼 핸들링하는건 리엑트의 방법이 아님. 필요하다면 ref라는 참조값을 설정해서 사용하라 최대한 DOM참조 없이 작업을 하는것이 퍼포먼스에 좋다.
+
+functinal Component
+
+- this.state
+- ref 메서드
+- component에 lifeCycle
+위 세가지가 들어가는 순간 순수한 함수형 component에서 벗어난다.
