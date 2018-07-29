@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class AddLi extends Component {
 
@@ -35,5 +36,9 @@ class AddLi extends Component {
 		)
 	}
 }
+
+AddLi.propTypes = {
+	handleAddedData : PropTypes.func.isRequired
+};
 
 export default AddLi;

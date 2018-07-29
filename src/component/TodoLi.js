@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 const TodoLi = ({handleRemovedData, todo}) => {
 
@@ -17,6 +18,12 @@ const TodoLi = ({handleRemovedData, todo}) => {
 			</span>
 		</li>
 	)
+};
+
+
+TodoLi.propTypes = {
+	handleRemovedData : PropTypes.func.isRequired,
+	todo : PropTypes.string.isRequired
 };
 
 // class TodoLi extends Component {

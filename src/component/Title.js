@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import PropTypes from 'prop-types'; //prop를 설정하기 위함
 
 // class Title extends Component {
 //
@@ -20,6 +20,11 @@ const Title = ({text}) => {
 			<h1>{text}</h1>
 		</div>
 	)
+};
+
+//props validation
+Title.propTypes = {
+	text : PropTypes.string.isRequired
 };
 
 export default Title;

@@ -14,8 +14,6 @@ setState
 - this.setState(function(prevState){ //여기서 첫번째 인자 prevState가 이전 state임. })
 
 
-
-
 life cycle
 
 - ajax나 fetch같은 call은 componentDidMount에 넣는경우가 좋다. component 뼈대가 한번 그려진 시점에 호출
@@ -27,9 +25,15 @@ eventHandling
 
 - virtual DOM을 real DOM처럼 핸들링하는건 리엑트의 방법이 아님. 필요하다면 ref라는 참조값을 설정해서 사용하라 최대한 DOM참조 없이 작업을 하는것이 퍼포먼스에 좋다.
 
-functinal Component
+
+functional Component
 
 - this.state
 - ref 메서드
 - component에 lifeCycle
 위 세가지가 들어가는 순간 순수한 함수형 component에서 벗어난다.
+
+
+PropTypes
+
+- PropTypes는 function형 이든 class 형태이든 상관없이 모두 쓸 수있다.
